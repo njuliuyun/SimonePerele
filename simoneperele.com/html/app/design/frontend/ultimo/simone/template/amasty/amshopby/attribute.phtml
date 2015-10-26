@@ -161,6 +161,15 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
             if ($(window).width() <= 768) {
                 $('.filter-toggle-content').hide();
             }
+            else {
+                if ($('#action-status').height() == 0) {
+
+                    $('.category-products .pager').css('border-top', 'none');
+                }
+                else {
+                    $('.category-products .pager').css('border-top', '1px solid #D3D2D8;');
+                }
+            }
 
             $('#filter-block').off().click(function() {
                 if ($(window).width() > 768) {
@@ -184,9 +193,23 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
                     //console.log('>768');
                     $('.filter-toggle-content').show();
                     $('#filter-content').appendTo('#filter-wrapper');
-                } else {
+
+                    //border between page and filter
+
+                    if ($('#action-status').height() == 0) {
+
+                        $('.category-products .pager').css('border-top', 'none');
+                    }
+                    else {
+                        $('.category-products .pager').css('border-top', '1px solid #D3D2D8');
+                    }
+
+                }
+                else {
                     $('.filter-toggle-content').hide();
                     //$('#filter-content').after('#filter-wrapper');
+
+                    $('.category-products .pager').css('border-top', '1px solid #D3D2D8');
                 }
             });
 
