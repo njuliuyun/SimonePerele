@@ -159,30 +159,35 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
                 }
             //}
             if ($(window).width() <= 768) {
-
                 $('.filter-toggle-content').hide();
-                $('.amshopby-filters-top .block-title').off().click(function() {
-                    if ($(window).width() > 768) {
-                        return;
-                    } else {
-                        if (!$(this).hasClass('active-filter')) {
-                            $(this).addClass('active-filter');
-                            $('.filter-toggle-content').show();
-                        }
-                        else {
-                            $(this).removeClass('active-filter');
-                            $('.filter-toggle-content').hide();
-                        }
-                    }
-
-                });
             }
-            $(window).resize(function() {
 
+            $('#filter-block').off().click(function() {
+                if ($(window).width() > 768) {
+                    return;
+                } else {
+                    if (!$(this).hasClass('active-filter')) {
+                        $(this).addClass('active-filter');
+                        $('.filter-toggle-content').show();
+                    }
+                    else {
+                        $(this).removeClass('active-filter');
+                        $('.filter-toggle-content').hide();
+                    }
+                }
+
+            });
+
+            $(window).resize(function() {
+                $('#filter-block').removeClass('active-filter');
                 if ($(this).width() > 768) {
                     //console.log('>768');
                     $('.filter-toggle-content').show();
-                } else $('.filter-toggle-content').hide();
+                    $('#filter-content').appendTo('#filter-wrapper');
+                } else {
+                    $('.filter-toggle-content').hide();
+                    //$('#filter-content').after('#filter-wrapper');
+                }
             });
 
         });
