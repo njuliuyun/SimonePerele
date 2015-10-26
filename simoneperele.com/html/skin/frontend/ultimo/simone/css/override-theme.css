@@ -1868,8 +1868,8 @@ border:1.5px solid #D201D7;
 /*.pager {border-top:1px solid #D2D1D7}*/
 
 /*.category-products .pager{border-top: none;}*/
-.toolbar {width: 50%; bottom: 0px; border-bottom: 1px solid #D3D2D8;}
-
+.category-products .toolbar {width: 50%; bottom: 0px; border-bottom: 1px solid #D3D2D8;}
+.toolbar-bottom .toolbar {border: none;}
 
 .pager .pages strong{margin-top:2px;}
 
@@ -2704,12 +2704,12 @@ h3{font-family: 'playfair_displayregular' !important; font-size:18px; }
 		margin-top: -20px;
 		margin-bottom: 10px;
 	}
-	#action-status {top:-30px;border:none;}
+	#action-status {top:-33px;/*border:none;*/}
 	.category-products {position: relative;}
-	.toolbar {position:absolute; top:0; right:0;border:none;}
+	.category-products .toolbar {position:absolute; top:0; right:0;height:43px;border:none;}
 	.sorter .sort-by {margin-right:0!important;}
 
-	#action-status .actions{margin-top: 0;}
+	/*#action-status .actions{margin-top: 0;}*/
 
 	.category-products .pager{border-top: 1px solid #D3D2D8;}
 	/* fix the position bug for the product image above the filter */

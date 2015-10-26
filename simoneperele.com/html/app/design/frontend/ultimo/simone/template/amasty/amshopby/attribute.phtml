@@ -164,10 +164,10 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
             else {
                 if ($('#action-status').height() == 0) {
 
-                    $('.category-products .pager').css('border-top', 'none');
+                    $('.category-products .pager').first().css('border-top', 'none');
                 }
                 else {
-                    $('.category-products .pager').css('border-top', '1px solid #D3D2D8;');
+                    $('.category-products .pager').first().css('border-top', '1px solid #D3D2D8');
                 }
             }
 
@@ -178,10 +178,12 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
                     if (!$(this).hasClass('active-filter')) {
                         $(this).addClass('active-filter');
                         $('.filter-toggle-content').show();
+                        $('.category-products .toolbar').first().css('border-bottom', '1px solid #D3D2D8');
                     }
                     else {
                         $(this).removeClass('active-filter');
                         $('.filter-toggle-content').hide();
+                        $('.category-products .toolbar').first().css('border-bottom', 'none');
                     }
                 }
 
@@ -198,18 +200,22 @@ if ($this->getShowLessMore() && in_array($this->getDisplayType(), array(
 
                     if ($('#action-status').height() == 0) {
 
-                        $('.category-products .pager').css('border-top', 'none');
+                        $('.category-products .pager').first().css('border-top', 'none');
                     }
                     else {
-                        $('.category-products .pager').css('border-top', '1px solid #D3D2D8');
+                        $('.category-products .pager').first().css('border-top', '1px solid #D3D2D8');
                     }
+
+                    $('.category-products .toolbar').first().css('border-bottom', '1px solid #D3D2D8');
 
                 }
                 else {
                     $('.filter-toggle-content').hide();
                     //$('#filter-content').after('#filter-wrapper');
 
-                    $('.category-products .pager').css('border-top', '1px solid #D3D2D8');
+                    $('.category-products .pager').first().css('border-top', '1px solid #D3D2D8');
+
+                    $('.category-products .toolbar').first().css('border-bottom', 'none');
                 }
             });
 
