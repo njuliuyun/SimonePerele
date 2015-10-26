@@ -2704,6 +2704,10 @@ h3{font-family: 'playfair_displayregular' !important; font-size:18px; }
 		margin-top: -20px;
 		margin-bottom: 10px;
 	}
+
+	.main-container .main .inner-container .col-main {margin-bottom:0;}
+
+   /*#filter-content {width: 250px!important; height: 75px!important;}*/
 	#action-status {top:-33px;/*border:none;*/}
 	.category-products {position: relative;}
 	.category-products .toolbar {position:absolute; top:0; right:0;height:43px;border:none;}
